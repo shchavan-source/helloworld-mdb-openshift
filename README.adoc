@@ -79,7 +79,7 @@ include::../shared-doc/undeploy-the-quickstart.adoc[leveloffset=+1]
 include::../shared-doc/run-the-quickstart-in-jboss-developer-studio.adoc[leveloffset=+1]
 
 // Additional Red Hat CodeReady Studio instructions
-NOTE: Within {JBDSProductName}, make sure you define a server runtime environment that uses the `standalone-full.xml` configuration file.
+NOTE: Within {JBDSProductName}, make sure you define a server runtime environment that uses the `standalone-openshift.xml` configuration file.
 
 
 // Debug the Application
