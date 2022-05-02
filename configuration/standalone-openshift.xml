@@ -596,13 +596,13 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
         <outbound-socket-binding name="messaging-remote-throughput1">
-            <remote-destination host="ex-aao-acceptor1-0-svc" port="61617"/>
+            <remote-destination host="ex-aao-acceptor1-0-svc.amq-broker.svc.cluster.local" port="61617"/>
         </outbound-socket-binding>
         <outbound-socket-binding name="messaging-remote-throughput2">
-            <remote-destination host="ex-aao-acceptor1-1-svc" port="61617"/>
+            <remote-destination host="ex-aao-acceptor1-1-svc.amq-broker.svc.cluster.local" port="61617"/>
         </outbound-socket-binding>
         <outbound-socket-binding name="messaging-remote-throughput3">
-            <remote-destination host="ex-aao-acceptor1-2-svc" port="61617"/>
+            <remote-destination host="ex-aao-acceptor1-2-svc.amq-broker.svc.cluster.local" port="61617"/>
         </outbound-socket-binding>
     </socket-binding-group>
 </server>
