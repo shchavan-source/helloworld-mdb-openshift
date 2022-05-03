@@ -55,8 +55,7 @@ import javax.jms.JMSException;
         @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge"),
         @ActivationConfigProperty(propertyName = "hA", propertyValue = "true"),
         @ActivationConfigProperty(propertyName = "rebalanceConnections", propertyValue = "true"),
-        @ActivationConfigProperty(propertyName = "use-topology-for-load-balancing", propertyValue = "false"),
-        @ActivationConfigProperty(propertyName = "maxSession", propertyValue = "5")})
+        @ActivationConfigProperty(propertyName = "maxSession", propertyValue = "20")})
 public class HelloWorldQueueMDB implements MessageListener {
 
     private static final Logger LOGGER = Logger.getLogger(HelloWorldQueueMDB.class.toString());
