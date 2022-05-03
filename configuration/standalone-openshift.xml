@@ -443,8 +443,8 @@
                     <param name="batch-delay" value="50"/>
                 </http-connector>
                 <remote-connector name="netty-remote-throughput1" socket-binding="messaging-remote-throughput1"/>
-                <!--<remote-connector name="netty-remote-throughput2" socket-binding="messaging-remote-throughput2"/>
-                <remote-connector name="netty-remote-throughput3" socket-binding="messaging-remote-throughput3"/>-->
+                <remote-connector name="netty-remote-throughput2" socket-binding="messaging-remote-throughput2"/>
+                <remote-connector name="netty-remote-throughput3" socket-binding="messaging-remote-throughput3"/>
                 <in-vm-connector name="in-vm" server-id="0">
                     <param name="buffer-pooling" value="false"/>
                 </in-vm-connector>
@@ -464,8 +464,8 @@
                 <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactory" connectors="in-vm"/>
                 <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory" connectors="http-connector"/>
                 <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
-                <!-- <pooled-connection-factory name="activemq-ra-ConnectionFactorySimulatorPooled" entries="java:/ConnectionFactorySimulator java:jboss/ConnectionFactorySimulator" connectors="netty-remote-throughput1 netty-remote-throughput2 netty-remote-throughput3" ha="true" reconnect-attempts="-1" user="admin" password="admin" min-pool-size="2" max-pool-size="100"/> -->
-                <pooled-connection-factory name="activemq-ra-ConnectionFactorySimulatorPooled" entries="java:/ConnectionFactorySimulator java:jboss/ConnectionFactorySimulator" connectors="netty-remote-throughput1" ha="true" reconnect-attempts="-1" user="admin" password="admin" min-pool-size="2" max-pool-size="100"/>
+                <pooled-connection-factory name="activemq-ra-ConnectionFactorySimulatorPooled" entries="java:/ConnectionFactorySimulator java:jboss/ConnectionFactorySimulator" connectors="netty-remote-throughput1 netty-remote-throughput2 netty-remote-throughput3" ha="true" reconnect-attempts="-1" user="admin" password="admin" min-pool-size="2" max-pool-size="100"/>
+                <!--<pooled-connection-factory name="activemq-ra-ConnectionFactorySimulatorPooled" entries="java:/ConnectionFactorySimulator java:jboss/ConnectionFactorySimulator" connectors="netty-remote-throughput1" ha="true" reconnect-attempts="-1" user="admin" password="admin" min-pool-size="2" max-pool-size="100"/>-->
             </server>
         </subsystem>
         <subsystem xmlns="urn:wildfly:microprofile-config-smallrye:1.0"/>
@@ -596,10 +596,10 @@
         <outbound-socket-binding name="mail-smtp">
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
-        <outbound-socket-binding name="messaging-remote-throughput1">
+        <!--<outbound-socket-binding name="messaging-remote-throughput1">
             <remote-destination host="amq-broker-internal-svc.amq-broker.svc.cluster.local" port="61617"/>
-        </outbound-socket-binding>
-        <!-- <outbound-socket-binding name="messaging-remote-throughput1">
+        </outbound-socket-binding>-->
+         <outbound-socket-binding name="messaging-remote-throughput1">
             <remote-destination host="ex-aao-acceptor1-0-svc.amq-broker.svc.cluster.local" port="61617"/>
         </outbound-socket-binding>
         <outbound-socket-binding name="messaging-remote-throughput2">
@@ -607,6 +607,6 @@
         </outbound-socket-binding>
         <outbound-socket-binding name="messaging-remote-throughput3">
             <remote-destination host="ex-aao-acceptor1-2-svc.amq-broker.svc.cluster.local" port="61617"/>
-        </outbound-socket-binding> -->
+        </outbound-socket-binding>
     </socket-binding-group>
 </server>
