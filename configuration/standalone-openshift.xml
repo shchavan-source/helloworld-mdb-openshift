@@ -465,7 +465,7 @@
                 <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory" connectors="http-connector"/>
                 <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
                 <!--<pooled-connection-factory name="activemq-ra-ConnectionFactorySimulatorPooled" entries="java:/ConnectionFactorySimulator java:jboss/ConnectionFactorySimulator" connectors="netty-remote-throughput1 netty-remote-throughput2 netty-remote-throughput3" ha="true" reconnect-attempts="-1" user="admin" password="admin" min-pool-size="2" max-pool-size="100" use-topology-for-load-balancing="false" use-auto-recovery="false"/>-->
-                <pooled-connection-factory name="activemq-ra-ConnectionFactorySimulatorPooled" entries="java:/ConnectionFactorySimulator java:jboss/ConnectionFactorySimulator" connectors="netty-remote-throughput1" ha="true" reconnect-attempts="-1" user="admin" password="admin" min-pool-size="2" max-pool-size="100"/>
+                <pooled-connection-factory name="activemq-ra-ConnectionFactorySimulatorPooled" entries="java:/ConnectionFactorySimulator java:jboss/ConnectionFactorySimulator" connectors="netty-remote-throughput1" ha="true" reconnect-attempts="-1" user="admin" password="admin" min-pool-size="2" max-pool-size="100" use-topology-for-load-balancing="false" use-auto-recovery="false"/>
             </server>
         </subsystem>
         <subsystem xmlns="urn:wildfly:microprofile-config-smallrye:1.0"/>
